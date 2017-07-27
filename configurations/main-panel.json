@@ -1,0 +1,58 @@
+{
+	"name":"CATCHUP09",
+	"url":"https://vmiis.github.io/modules/panels/panel.2.html",
+	"parameters":{
+		"sql_participant" : "@('Volunteer_ID')+' '+@('Initials')+' '+@('DOB')"
+	},
+	"panel":
+	{
+		"columns":
+		[
+			{
+				"sections":
+				[
+					{
+						"name":"Participants",
+						"modules":
+						[
+							{
+								"module_id":"participant",
+								"name":"Participants",
+								"table_id":"20006530",
+								"url":"/modules/participant.html",
+								"counting":"1"
+							}
+						]
+					}
+				]
+			}
+			,{
+				"sections":
+				[
+					{
+						"name":"Weekend 1 - Friday",
+						"modules":
+						[
+							{
+								"module_id":"m_002_001",
+								"name":"Pulse Wave Upload",
+								"table_id":"20006569",
+								"url":"/modules/task/Pulse_Wave_Upload.html",
+								"counting":"1"
+							}
+							,{
+								"module_id":"m_002_002",
+								"name":"ESS (WK1)",
+								"table_id":"20006543",
+								"url":"/modules/task/ESS.html",
+								"counting":"1"
+							}
+
+
+						]
+					}
+				]
+			}
+		]
+	}
+}

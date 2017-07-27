@@ -1,0 +1,54 @@
+<section>
+      VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+		_fields="_Form,Record_ID|UID,Volunteer_ID|VolunteerID,Initials,Location|LocationID,RandomisationNumber,Arm|ArmID,Date|DateID,Time|TimeID,Sex|SexID,Sequence|SeqID,Performance Date|PerformanceDate,DOB|DOBID,FirstTreatmentIntervention,SecondTreatmentIntervention";
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.2.js
+        //-------------------------------------
+		$('#new__ID').hide();
+		$('#save__ID').hide();
+        $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data();  })
+        //-------------------------------------
+        _cell_render=function(records,I,field,td,set_value,source){
+            switch(field){
+                case 'Record_ID':
+                    records[I].vm_custom[field]=true;
+                    break;
+				case 'Sex':
+                    VmInclude:__LIB__/vmiis/Common-Code/grid/field_gender.js
+                    break;
+                case 'DOB':
+                    VmInclude:__LIB__/vmiis/Common-Code/grid/field_dob.js
+                    break;
+            }
+        }
+        //-------------------------------------
+		var sql0="with tb0 as (select pt_idA=@('vm_id1') from [FORM-20004263] where s1='catchup09')";
+		sql0+=",tb1 as (select pt_idB=@('VolunteerID'), Information,ID,PID,UID,PUID,DateTime,Author from [TABLE-"+_db_pid+"-@S1] )";
+		sql0+=",tb as (select Information,ID,PID,UID,PUID,DateTime,Author,RowNum=row_number() over (order by UID) from tb0 left join tb1 on pt_idA=pt_idB )";
+		//-------------------------------------
+		_set_req=function(){
+			var sql=sql0+" select Information,ID,PID,UID,PUID,DateTime,Author,RowNum from tb where RowNum between @I6 and @I7";
+            var sql_n=sql0+" select count(ID) from tb";
+            _req={cmd:'query_records',db_pid:_db_pid,sql:sql,sql_n:sql_n,s1:'"'+$('#keyword__ID').val()+'"',I:$('#I__ID').text(),page_size:$('#page_size__ID').val()}
+        }
+        //-------------------------------------
+		var _set_req_export=function(){
+			var sql=sql0+" select Information,ID,PID,UID,PUID,DateTime,Author,RowNum from tb";
+            _set_from_to();
+            if(_from!='0' && _to!='0') sql+=" where RowNum between @I6 and @I7";
+            _req={cmd:'query_records',sql:sql,i6:_from,i7:_to}
+        }
+        //-----------------------------------------------
+	}
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+	VmInclude:__PARTS__/style/ease-in-out.2.css
+</style>
