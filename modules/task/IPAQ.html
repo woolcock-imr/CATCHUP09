@@ -1,0 +1,92 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+		VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="\
+			Initials|Initials,\
+	        Location|LocationID,\
+	        Randomisation Number|RandomisationNumber,\
+	        Arm|ArmID,\
+	        Date|DateID,\
+	        Time|TimeID,\
+	        Sex|SexID,\
+	        Sequence|SeqID,\
+	        Performance Date|PerformanceDate,\
+	        DOB|DOBID,\
+            IPAQ_TPA_Scores|IPAQ_TPA_Scores,\
+             IPAQ_TS_Scores|IPAQ_TS_Scores,\
+             IPAQ_Work|IPAQ_Work,\
+             IPAQ_Active_Transportation|IPAQ_Active_Transportation,\
+             IPAQ_Domestic_Garden|IPAQ_Domestic_Garden,\
+             IPAQ_Leisure_Time|IPAQ_Leisure_Time,\
+             IPAQ_1|IPAQ_1,\
+             IPAQ_2|IPAQ_2,\
+             IPAQ_ck2|IPAQ_ck2,\
+             IPAQ_3h|IPAQ_3h,\
+             IPAQ_3m|IPAQ_3m,\
+             IPAQ_4|IPAQ_4,\
+             IPAQ_ck4|IPAQ_ck4,\
+             IPAQ_5h|IPAQ_5h,\
+             IPAQ_5m|IPAQ_5m,\
+             IPAQ_6|IPAQ_6,\
+             IPAQ_ck6|IPAQ_ck6,\
+             IPAQ_7h|IPAQ_7h,\
+             IPAQ_7m|IPAQ_7m,\
+             IPAQ_8|IPAQ_8,\
+             IPAQ_ck8|IPAQ_ck8,\
+             IPAQ_9h|IPAQ_9h,\
+             IPAQ_9m|IPAQ_9m,\
+             IPAQ_10|IPAQ_10,\
+             IPAQ_ck10|IPAQ_ck10,\
+             IPAQ_11h|IPAQ_11h,\
+             IPAQ_11m|IPAQ_11m,\
+             IPAQ_12|IPAQ_12,\
+             IPAQ_ck12|IPAQ_ck12,\
+             IPAQ_13h|IPAQ_13h,\
+             IPAQ_13m|IPAQ_13m,\
+             IPAQ_14|IPAQ_14,\
+             IPAQ_ck14|IPAQ_ck14,\
+             IPAQ_15h|IPAQ_15h,\
+             IPAQ_15m|IPAQ_15m,\
+             IPAQ_16|IPAQ_16,\
+             IPAQ_ck16|IPAQ_ck16,\
+             IPAQ_17h|IPAQ_17h,\
+             IPAQ_17m|IPAQ_17m,\
+             IPAQ_18|IPAQ_18,\
+             IPAQ_ck18|IPAQ_ck18,\
+             IPAQ_19h|IPAQ_19h,\
+             IPAQ_19m|IPAQ_19m,\
+             IPAQ_20|IPAQ_20,\
+             IPAQ_ck20|IPAQ_ck20,\
+             IPAQ_21h|IPAQ_21h,\
+             IPAQ_21m|IPAQ_21m,\
+             IPAQ_22|IPAQ_22,\
+             IPAQ_ck22|IPAQ_ck22,\
+             IPAQ_23h|IPAQ_23h,\
+             IPAQ_23m|IPAQ_23m,\
+             IPAQ_24|IPAQ_24,\
+             IPAQ_ck24|IPAQ_ck24,\
+             IPAQ_25h|IPAQ_25h,\
+             IPAQ_25m|IPAQ_25m,\
+             IPAQ_26h|IPAQ_26h,\
+             IPAQ_26m|IPAQ_26m,\
+             IPAQ_27h|IPAQ_27h,\
+             IPAQ_27m|IPAQ_27m\
+		";
+		_fields="_Form,Volunteer_ID|VolunteerID_A,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data();  })
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

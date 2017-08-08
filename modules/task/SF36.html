@@ -1,0 +1,79 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+		VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="\
+			Initials|Initials,\
+	        Location|LocationID,\
+	        Randomisation Number|RandomisationNumber,\
+	        Arm|ArmID,\
+	        Date|DateID,\
+	        Time|TimeID,\
+	        Sex|SexID,\
+	        Sequence|SeqID,\
+	        Performance Date|PerformanceDate,\
+	        DOB|DOBID,\
+            PhysicalFunction|PhysicalFunction,\
+            RolePhysical|RolePhysical,\
+            BodyPain|BodyPain,\
+            GeneralHealth|GeneralHealth,\
+            Vitality|Vitality,\
+            SocialFunctioning|SocialFunctioning,\
+            RoleEmotional|RoleEmotional,\
+            MentalHealth|MentalHealth,\
+            PhysicalHealth|PhysicalHealth,\
+            MeanMentalHealth|MeanMentalHealth,\
+            SF36_1|SF36_1,\
+            SF36_2|SF36_2,\
+            SF36_3_1|SF36_3_1,\
+            SF36_3_2|SF36_3_2,\
+            SF36_3_3|SF36_3_3,\
+            SF36_3_4|SF36_3_4,\
+            SF36_3_4_1|SF36_3_4_1,\
+            SF36_3_5|SF36_3_5,\
+            SF36_3_6|SF36_3_6,\
+            SF36_3_7|SF36_3_7,\
+            SF36_3_8|SF36_3_8,\
+            SF36_3_9|SF36_3_9,\
+            SF36_4_1|SF36_4_1,\
+            SF36_4_2|SF36_4_2,\
+            SF36_4_3|SF36_4_3,\
+            SF36_4_4|SF36_4_4,\
+            SF36_5_1|SF36_5_1,\
+            SF36_5_2|SF36_5_2,\
+            SF36_5_3|SF36_5_3,\
+            SF36_6|SF36_6,\
+            SF36_7|SF36_7,\
+            SF36_8|SF36_8,\
+            SF36_9_1|SF36_9_1,\
+            SF36_9_2|SF36_9_2,\
+            SF36_9_3|SF36_9_3,\
+            SF36_9_4|SF36_9_4,\
+            SF36_9_5|SF36_9_5,\
+            SF36_9_6|SF36_9_6,\
+            SF36_9_7|SF36_9_7,\
+            SF36_9_8|SF36_9_8,\
+            SF36_9_9|SF36_9_9,\
+            SF36_10|SF36_10,\
+            SF36_11_1|SF36_11_1,\
+            SF36_11_2|SF36_11_2,\
+            SF36_11_3|SF36_11_3,\
+            SF36_11_4|SF36_11_4\
+		";
+		_fields="_Form,Volunteer_ID|VolunteerID_A,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data();  })
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

@@ -1,0 +1,70 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+		VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="\
+			Initials|Initials,\
+	        Location|LocationID,\
+	        Randomisation Number|RandomisationNumber,\
+	        Arm|ArmID,\
+	        Date|DateID,\
+	        Time|TimeID,\
+	        Sex|SexID,\
+	        Sequence|SeqID,\
+	        Performance Date|PerformanceDate,\
+	        DOB|DOBID,\
+            FOSQ|FOSQ,\
+            FOSQ_Activity|FOSQ_Activity,\
+            FOSQ_Vigilance|FOSQ_Vigilance,\
+            FOSQ_Intimacy|FOSQ_Intimacy,\
+            FOSQ_Productivity|FOSQ_Productivity,\
+            FOSQ_Social|FOSQ_Social,\
+            FOSQ_1|FOSQ_1,\
+            FOSQ_2|FOSQ_2,\
+            FOSQ_3|FOSQ_3,\
+            FOSQ_4|FOSQ_4,\
+            FOSQ_5|FOSQ_5,\
+            FOSQ_6|FOSQ_6,\
+            FOSQ_7|FOSQ_7,\
+            FOSQ_8|FOSQ_8,\
+            FOSQ_9|FOSQ_9,\
+            FOSQ_10|FOSQ_10,\
+            FOSQ_11|FOSQ_11,\
+            FOSQ_12|FOSQ_12,\
+            FOSQ_13|FOSQ_13,\
+            FOSQ_14|FOSQ_14,\
+            FOSQ_15|FOSQ_15,\
+            FOSQ_15_Comments|FOSQ_15_Comments,\
+            FOSQ_16|FOSQ_16,\
+            FOSQ_17|FOSQ_17,\
+            FOSQ_18|FOSQ_18,\
+            FOSQ_19|FOSQ_19,\
+            FOSQ_20|FOSQ_20,\
+            FOSQ_21|FOSQ_21,\
+            FOSQ_22|FOSQ_22,\
+            FOSQ_23|FOSQ_23,\
+            FOSQ_24|FOSQ_24,\
+            FOSQ_25|FOSQ_25,\
+            FOSQ_26|FOSQ_26,\
+            FOSQ_27|FOSQ_27,\
+            FOSQ_28|FOSQ_28,\
+            FOSQ_29|FOSQ_29,\
+            FOSQ_30|FOSQ_30\
+		";
+		_fields="_Form,Volunteer_ID|VolunteerID_A,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data();  })
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>
