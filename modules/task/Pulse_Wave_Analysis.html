@@ -1,0 +1,119 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+		VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="\
+                Initials|Initials,\
+                Location|LocationID,\
+                Randomisation Number|RandomisationNumber,\
+                Arm|ArmID,\
+                Date|DateID,\
+                Time|TimeID,\
+                Sex|SexID,\
+                Sequence|SeqID,\
+                Performance Date|PerformanceDate,\
+                DOB|DOBID,\
+                AS|AS,\
+                FilenameLocal|FilenameLocal,\
+                PWA_System_ID|PWA_System_ID,\
+                PWA_Database_ID|PWA_Database_ID,\
+                PWA_Patient_Number|PWA_Patient_Number,\
+                PWA_Sex|PWA_Sex,\
+                PWA_Date_Of_Birth|PWA_Date_Of_Birth,\
+                PWA_Patient_ID|PWA_Patient_ID,\
+                PWA_Patient_Code|PWA_Patient_Code,\
+                PWA_SP|PWA_SP,\
+                PWA_DP|PWA_DP,\
+                PWA_MP|PWA_MP,\
+                PWA_DATA_REV|PWA_DATA_REV,\
+                PWA_DATETIME|PWA_DATETIME,\
+                PWA_MEDICATION|PWA_MEDICATION,\
+                PWA_NOTES|PWA_NOTES,\
+                PWA_OPERATOR|PWA_OPERATOR,\
+                PWA_HEIGHT|PWA_HEIGHT,\
+                PWA_WEIGHT|PWA_WEIGHT,\
+                PWA_BODY_MASS_INDEX|PWA_BODY_MASS_INDEX,\
+                PWA_SAMPLE_RATE|PWA_SAMPLE_RATE,\
+                PWA_SUB_TYPE|PWA_SUB_TYPE,\
+                PWA_P_MAX_DPDT|PWA_P_MAX_DPDT,\
+                PWA_ED|PWA_ED,\
+                PWA_QUALITY_ED|PWA_QUALITY_ED,\
+                PWA_P_QC_PH|PWA_P_QC_PH,\
+                PWA_P_QC_PHV|PWA_P_QC_PHV,\
+                PWA_P_QC_PLV|PWA_P_QC_PLV,\
+                PWA_P_QC_DV|PWA_P_QC_DV,\
+                PWA_P_SP|PWA_P_SP,\
+                PWA_P_DP|PWA_P_DP,\
+                PWA_P_MEANP|PWA_P_MEANP,\
+                PWA_P_T1|PWA_P_T1,\
+                PWA_P_T2|PWA_P_T2,\
+                PWA_P_AI|PWA_P_AI,\
+                PWA_P_ED|PWA_P_ED,\
+                PWA_P_CalcED|PWA_P_CalcED,\
+                PWA_P_ESP|PWA_P_ESP,\
+                PWA_P_P1|PWA_P_P1,\
+                PWA_P_P2|PWA_P_P2,\
+                PWA_P_T1ED|PWA_P_T1ED,\
+                PWA_P_T2ED|PWA_P_T2ED,\
+                PWA_P_QUALITY_T1|PWA_P_QUALITY_T1,\
+                PWA_P_QUALITY_T2|PWA_P_QUALITY_T2,\
+                PWA_C_AP|PWA_C_AP,\
+                PWA_C_AP_HR75|PWA_C_AP_HR75,\
+                PWA_C_MPS|PWA_C_MPS,\
+                PWA_C_MPD|PWA_C_MPD,\
+                PWA_C_TTI|PWA_C_TTI,\
+                PWA_C_DTI|PWA_C_DTI,\
+                PWA_C_SVI|PWA_C_SVI,\
+                PWA_HR|PWA_HR,\
+                PWA_C_PERIOD|PWA_C_PERIOD,\
+                PWA_C_DD|PWA_C_DD,\
+                PWA_C_ED_PERIOD|PWA_C_ED_PERIOD,\
+                PWA_C_DD_PERIOD|PWA_C_DD_PERIOD,\
+                PWA_C_PH|PWA_C_PH,\
+                PWA_C_AGPH|PWA_C_AGPH,\
+                PWA_C_AGPH_HR75|PWA_C_AGPH_HR75,\
+                PWA_C_P1_HEIGHT|PWA_C_P1_HEIGHT,\
+                PWA_C_T1R|PWA_C_T1R,\
+                PWA_C_CO_TTIME|PWA_C_CO_TTIME,\
+                PWA_C_CO_AREA_A|PWA_C_CO_AREA_A,\
+                PWA_C_CO_AREA_B|PWA_C_CO_AREA_B,\
+                PWA_C_CO_AREA_C|PWA_C_CO_AREA_C,\
+                PWA_C_CO_AREA_D|PWA_C_CO_AREA_D,\
+                PWA_C_CO_MP_A|PWA_C_CO_MP_A,\
+                PWA_C_CO_MP_C|PWA_C_CO_MP_C,\
+                PWA_C_SP|PWA_C_SP,\
+                PWA_C_DP|PWA_C_DP,\
+                PWA_C_MEANP|PWA_C_MEANP,\
+                PWA_C_T1|PWA_C_T1,\
+                PWA_C_T2|PWA_C_T2,\
+                PWA_C_AI|PWA_C_AI,\
+                PWA_C_ED|PWA_C_ED,\
+                PWA_C_CalcED|PWA_C_CalcED,\
+                PWA_C_ESP|PWA_C_ESP,\
+                PWA_C_P1|PWA_C_P1,\
+                PWA_C_P2|PWA_C_P2,\
+                PWA_C_T1ED|PWA_C_T1ED,\
+                PWA_C_T2ED|PWA_C_T2ED,\
+                PWA_C_QUALITY_T1|PWA_C_QUALITY_T1,\
+                PWA_C_QUALITY_T2|PWA_C_QUALITY_T2,\
+                PWA_INTERPRETATION|PWA_INTERPRETATION,\
+                PWA_Inconclusive|PWA_Inconclusive,\
+                PWA_Operator_Index|PWA_Operator_Index\
+		";
+		_fields="_Form,Volunteer_ID|VolunteerID_A,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data();  })
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

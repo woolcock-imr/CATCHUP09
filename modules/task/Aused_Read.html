@@ -1,0 +1,65 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+		VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="\
+                Initials|Initials,\
+                Location|LocationID,\
+                Randomisation Number|RandomisationNumber,\
+                Arm|ArmID,\
+                Date|DateID,\
+                Time|TimeID,\
+                Sex|SexID,\
+                Sequence|SeqID,\
+                Performance Date|PerformanceDate,\
+                DOB|DOBID,\
+                Number_RT|Number_RT,\
+                Mean_RT|Mean_RT,\
+                Median_RT|Median_RT,\
+                StDev_RT|StDev_RT,\
+                Lapses|Lapses,\
+                Number_Crashes|Number_Crashes,\
+                Brake_1|Brake_1,\
+                Brake_2|Brake_2,\
+                Brake_3|Brake_3,\
+                Brake_4|Brake_4,\
+                Brake_5|Brake_5,\
+                Brake_6|Brake_6,\
+                Brake_7|Brake_7,\
+                Brake_8|Brake_8,\
+                Brake_9|Brake_9,\
+                Brake_10|Brake_10,\
+                STDVC_F|STDVC_F,\
+                STDVM_F|STDVM_F,\
+                SPDEV_F|SPDEV_F,\
+                STDVC_P1|STDVC_P1,\
+                STDVM_P1|STDVM_P1,\
+                SPDEV_P1|SPDEV_P1,\
+                STDVC_P2|STDVC_P2,\
+                STDVM_P2|STDVM_P2,\
+                SPDEV_P2|SPDEV_P2,\
+                STDVC_P3|STDVC_P3,\
+                STDVM_P3|STDVM_P3,\
+                SPDEV_P3|SPDEV_P3,\
+                STDVC_P4|STDVC_P4,\
+                STDVM_P4|STDVM_P4,\
+                SPDEV_P4|SPDEV_P4,\
+                VersionNum|VersionNum\
+         		";
+		_fields="_Form,Volunteer_ID|VolunteerID_A,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data();  })
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

@@ -1,0 +1,39 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+		VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="\
+                Initials|Initials,\
+                Location|LocationID,\
+                Randomisation Number|RandomisationNumber,\
+                Arm|ArmID,\
+                Date|DateID,\
+                Time|TimeID,\
+                Sex|SexID,\
+                Sequence|SeqID,\
+                Performance Date|PerformanceDate,\
+                DOB|DOBID,\
+                SPC|SPC,\
+                SPRT|SPRT,\
+                STTT|STTT,\
+                SCORR|SCORR,\
+                STotal|STotal,\
+                ReactionTimes|ReactionTimes\
+		";
+		_fields="_Form,Volunteer_ID|VolunteerID_A,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data();  })
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

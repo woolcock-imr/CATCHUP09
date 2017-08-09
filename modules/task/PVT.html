@@ -1,0 +1,78 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+		VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="\
+                Initials|Initials,\
+                Location|LocationID,\
+                Randomisation Number|RandomisationNumber,\
+                Arm|ArmID,\
+                Date|DateID,\
+                Time|TimeID,\
+                Sex|SexID,\
+                Sequence|SeqID,\
+                Performance Date|PerformanceDate,\
+                DOB|DOBID,\
+                PVT_Subject_ID|PVT_Subject_ID,\
+                PVT_Trial_No|PVT_Trial_No,\
+                PVT_Trial_Date_Time|PVT_Trial_Date_Time,\
+                PVT_Study|PVT_Study,\
+                PVT_Subj_Initials|PVT_Subj_Initials,\
+                PVT_Exp_Initials|PVT_Exp_Initials,\
+                PVT_ISIMin|PVT_ISIMin,\
+                PVT_ISIMax|PVT_ISIMax,\
+                PVT_HandUsed|PVT_HandUsed,\
+                PVT_TotalLength|PVT_TotalLength,\
+                PVT_PreVAS|PVT_PreVAS,\
+                PVT_PostVAS|PVT_PostVAS,\
+                PVT_GoodRs|PVT_GoodRs,\
+                PVT_MeanRT|PVT_MeanRT,\
+                PVT_SDRT|PVT_SDRT,\
+                PVT_MedianRT|PVT_MedianRT,\
+                PVT_MinRT|PVT_MinRT,\
+                PVT_MaxRT|PVT_MaxRT,\
+                PVT_MeanRRT|PVT_MeanRRT,\
+                PVT_SDRRT|PVT_SDRRT,\
+                PVT_Lapses|PVT_Lapses,\
+                PVT_Lap|PVT_Lap,\
+                PVT_TotalErrors|PVT_TotalErrors,\
+                PVT_RTLess100|PVT_RTLess100,\
+                PVT_WrongKey|PVT_WrongKey,\
+                PVT_FalseStartsCorrKey|PVT_FalseStartsCorrKey,\
+                PVT_FalseStartsInCorrKey|PVT_FalseStartsInCorrKey,\
+                PVT_KeyHeld|PVT_KeyHeld,\
+                PVT_NoR30sec|PVT_NoR30sec,\
+                PVT_DistribAsym|PVT_DistribAsym,\
+                PVT_MeanFRT|PVT_MeanFRT,\
+                PVT_SDFRT|PVT_SDFRT,\
+                PVT_MeanFRRT|PVT_MeanFRRT,\
+                PVT_MeanSDFRRT|PVT_MeanSDFRRT,\
+                PVT_MeanSRT|PVT_MeanSRT,\
+                PVT_SDSRT|PVT_SDSRT,\
+                PVT_MeanSRRT|PVT_MeanSRRT,\
+                PVT_SDSRRT|PVT_SDSRRT,\
+                PVT_RRTSlope|PVT_RRTSlope,\
+                PVT_RRTIntcpt|PVT_RRTIntcpt,\
+                PVT_RRTR2|PVT_RRTR2,\
+                PVT_CiSlope|PVT_CiSlope,\
+                PVT_STdErrOfLine|PVT_STdErrOfLine,\
+                PVT_tVsZeroSlope|PVT_tVsZeroSlope,\
+                PVT_PercentChange|PVT_PercentChange\
+		";
+		_fields="_Form,Volunteer_ID|VolunteerID_A,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data();  })
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>
