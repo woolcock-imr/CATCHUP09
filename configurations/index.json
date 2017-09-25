@@ -8,13 +8,11 @@
 	{
 		"home":
 		{
-			"url":"https://vmiis.github.io/modules/home/home.html"
-		}
-	},
-	"panels":
-	{
-		"main":{
-			"config_url":"/configurations/main-panel.json"
+			"url":"/modules/static/home.html"
+		},
+		"portal":
+		{
+			"url":"/configurations/portal.json"
 		}
 	}
 }
