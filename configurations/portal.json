@@ -175,7 +175,7 @@
 							,{"module_id":"m_025_008","name":"SAT PSG (WK2)","table_id":"20006663","url":"/modules/dynamic/catchup09/task/PSG.html","counting":"1"}
 		]}]}
 		,{"sections":[{"name":"9. Weekend 2 - Sunday","modules":[
-							{"module_id":"m_001_009","name":"Pulse Wave upload","table_id":"20006677","url":"/modules/dynamic/catchup09/task/Pulse_Wave_upload.html","counting":"1"}
+							{"module_id":"m_001_009","name":"Pulse Wave upload","table_id":"20006677","url":"/modules/dynamic/catchup09/task/Pulse_Wave_Upload.html","counting":"1"}
 							,{"module_id":"m_002_009","name":"SUN WAKE KSS (WK2)","table_id":"20006695","url":"/modules/dynamic/catchup09/task/KSS.html","counting":"1"}
 							,{"module_id":"m_003_009","name":"SUN Craving Scale Australia (WK2)","table_id":"20006687","url":"/modules/dynamic/catchup09/task/Craving_Scale_Australia.html","counting":"1"}
 							,{"module_id":"m_004_009","name":"SUN Hunger rating (WK2)","table_id":"20006688","url":"/modules/dynamic/catchup09/task/Hunger_rating.html","counting":"1"}
